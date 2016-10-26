@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{412A96FA-10A8-4687-90CE-68046076E7DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FilmSessionData</RootNamespace>
+    <AssemblyName>FilmSessionData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructures\DbFactory.cs" />
+    <Compile Include="Infrastructures\Disposeable.cs" />
+    <Compile Include="Infrastructures\IDbFactory.cs" />
+    <Compile Include="Infrastructures\IRepository.cs" />
+    <Compile Include="Infrastructures\IUnitOfWork.cs" />
+    <Compile Include="Infrastructures\RepositoryBase.cs" />
+    <Compile Include="Infrastructures\UnitOfWork.cs" />
+    <Compile Include="Migrations\201610260311215_InitialDB.cs" />
+    <Compile Include="Migrations\201610260311215_InitialDB.Designer.cs">
+      <DependentUpon>201610260311215_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610260819390_AddNewDB.cs" />
+    <Compile Include="Migrations\201610260819390_AddNewDB.Designer.cs">
+      <DependentUpon>201610260819390_AddNewDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610260820510_RemoveAttribute.cs" />
+    <Compile Include="Migrations\201610260820510_RemoveAttribute.Designer.cs">
+      <DependentUpon>201610260820510_RemoveAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\FilmRepository.cs" />
+    <Compile Include="Repositories\FilmSessionRepository.cs" />
+    <Compile Include="Repositories\StatusRepository.cs" />
+    <Compile Include="Repositories\TimeSession.cs" />
+    <Compile Include="TestCodeFirstEntityDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FilmSessionCommon\FilmSessionCommon.csproj">
+      <Project>{106287e2-8936-4792-b48e-2ff75caaebde}</Project>
+      <Name>FilmSessionCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilmSessionModel\FilmSessionModel.csproj">
+      <Project>{37761c92-7e78-4d87-af84-187b834247bc}</Project>
+      <Name>FilmSessionModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610260311215_InitialDB.resx">
+      <DependentUpon>201610260311215_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610260819390_AddNewDB.resx">
+      <DependentUpon>201610260819390_AddNewDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610260820510_RemoveAttribute.resx">
+      <DependentUpon>201610260820510_RemoveAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

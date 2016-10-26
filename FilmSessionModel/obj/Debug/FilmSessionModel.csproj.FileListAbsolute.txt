@@ -1,0 +1,12 @@
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\FilmSessionModel.dll.config
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\FilmSessionModel.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\FilmSessionModel.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\EntityFramework.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\EntityFramework.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\obj\Debug\FilmSessionModel.csprojResolveAssemblyReference.cache
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\obj\Debug\FilmSessionModel.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\obj\Debug\FilmSessionModel.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\FilmSessionCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionModel\bin\Debug\FilmSessionCommon.pdb

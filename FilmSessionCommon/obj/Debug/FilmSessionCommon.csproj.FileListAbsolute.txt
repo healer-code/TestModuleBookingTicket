@@ -1,0 +1,5 @@
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionCommon\bin\Debug\FilmSessionCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionCommon\bin\Debug\FilmSessionCommon.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionCommon\obj\Debug\FilmSessionCommon.csprojResolveAssemblyReference.cache
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionCommon\obj\Debug\FilmSessionCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionCommon\obj\Debug\FilmSessionCommon.pdb
