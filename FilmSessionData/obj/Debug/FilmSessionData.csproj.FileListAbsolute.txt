@@ -14,5 +14,3 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirst
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\FilmSessionModel.pdb
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.InitialDB.resources
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.csproj.GenerateResource.Cache
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.AddNewDB.resources
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.RemoveAttribute.resources

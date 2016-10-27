@@ -56,17 +56,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\201610260311215_InitialDB.cs" />
-    <Compile Include="Migrations\201610260311215_InitialDB.Designer.cs">
-      <DependentUpon>201610260311215_InitialDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610260819390_AddNewDB.cs" />
-    <Compile Include="Migrations\201610260819390_AddNewDB.Designer.cs">
-      <DependentUpon>201610260819390_AddNewDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610260820510_RemoveAttribute.cs" />
-    <Compile Include="Migrations\201610260820510_RemoveAttribute.Designer.cs">
-      <DependentUpon>201610260820510_RemoveAttribute.cs</DependentUpon>
+    <Compile Include="Migrations\201610270421189_InitialDB.cs" />
+    <Compile Include="Migrations\201610270421189_InitialDB.Designer.cs">
+      <DependentUpon>201610270421189_InitialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,14 +83,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610260311215_InitialDB.resx">
-      <DependentUpon>201610260311215_InitialDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610260819390_AddNewDB.resx">
-      <DependentUpon>201610260819390_AddNewDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610260820510_RemoveAttribute.resx">
-      <DependentUpon>201610260820510_RemoveAttribute.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610270421189_InitialDB.resx">
+      <DependentUpon>201610270421189_InitialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

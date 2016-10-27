@@ -51,8 +51,14 @@
   <ItemGroup>
     <Compile Include="Abstracts\Auditable.cs" />
     <Compile Include="Abstracts\IAuditable.cs" />
+    <Compile Include="Models\BookingTicket.cs" />
+    <Compile Include="Models\Cinema.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\FilmSession.cs" />
+    <Compile Include="Models\RoomFilm.cs" />
+    <Compile Include="Models\SeatList.cs" />
+    <Compile Include="Models\SeatTable.cs" />
+    <Compile Include="Models\SeatType.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\TimeSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

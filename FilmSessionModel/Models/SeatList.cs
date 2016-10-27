@@ -3,42 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FilmSessionModel.Abstracts;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FilmSessionModel.Abstracts;
 
 namespace FilmSessionModel.Models
 {
-    [Table("RoomFilms")]
-    public class RoomFilm: Auditable
+    [Table("SeatLists")]
+    public class SeatList:Auditable
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RoomFilmID { get; set; }
-
+        public int SeatID { get; set; }
         [Required]
         [DataType("nvarchar")]
         [MaxLength(3)]
-        public string RoomFilmPrefix { get; set; }
-
+        public string SeatPrefix { get; set; }
         [Required]
         [DataType("nvarchar")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public string RoomFilmCode { get; private set; }
+        public string SeatCode { get; private set; } 
 
         [Required]
-        public string RoomFilmName { get; set; }
+        public int SeatListTable { get; set; }
 
         [Required]
-        [Range(0,500)]
-        public int RoomAmountSeat { get; set; }
-
+        public int SeatTypeID { get; set; }
         [Required]
         [DataType("nvarchar"), MaxLength(3)]
-        public string RoomFilmStatus { get; set; }
+        public string SeatStatus { get; set; }
 
-        [ForeignKey("RoomFilmStatus")]
+        [ForeignKey("SeatTypeID")]
+        public virtual SeatType SeatType { get; set; }
+        [ForeignKey("SeatStatus")]
         public virtual Status Status { get; set; }
-        public virtual IEnumerable<SeatTable> SeatTables { get; set; }
+
+        [ForeignKey("SeatListTable")]
+        public virtual SeatTable SeatTable { get; set; }
     }
 }

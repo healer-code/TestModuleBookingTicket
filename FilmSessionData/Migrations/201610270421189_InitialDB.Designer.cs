@@ -13,7 +13,7 @@ namespace FilmSessionData.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201610260311215_InitialDB"; }
+            get { return "201610270421189_InitialDB"; }
         }
         
         string IMigrationMetadata.Source

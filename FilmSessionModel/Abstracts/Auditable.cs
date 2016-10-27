@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FilmSessionModel.Abstracts;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FilmSessionModel.Abstracts
 {
-    public class Auditable: IAuditable
+    public class Auditable : IAuditable
     {
+        [Required,DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? CreatedDate { set; get; }
 
         [MaxLength(256)]
         public string CreatedBy { set; get; }
 
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? UpdatedDate { set; get; }
 
         [MaxLength(256)]
@@ -25,6 +23,5 @@ namespace FilmSessionModel.Abstracts
 
         [MaxLength(256)]
         public string MetaDescription { set; get; }
-
     }
 }
