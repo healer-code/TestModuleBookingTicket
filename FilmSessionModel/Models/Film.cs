@@ -9,6 +9,10 @@ namespace FilmSessionModel.Models
     [Table("Films")]
     public class Film:Auditable
     {
+        public Film()
+        {
+            FilmSessions = new HashSet<FilmSession>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int FilmID { get; set; }
@@ -16,7 +20,7 @@ namespace FilmSessionModel.Models
         [DataType("nvarchar")]
         [MaxLength(3)]
         public string FilmPrefix { get; set; }
-        [Required]
+
         [DataType("nvarchar")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string FilmCode { get; private set; }

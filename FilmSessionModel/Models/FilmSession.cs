@@ -9,7 +9,7 @@ namespace FilmSessionModel.Models
     {
         [Key]
         [Column(Order = 0)]
-        public int FilmSessionID { get; set; }
+        public int FilmID { get; set; }
         [Key]
         [Column(Order = 1)]
         public int CinemaID { get; set; }
@@ -20,7 +20,7 @@ namespace FilmSessionModel.Models
         public string FilmCalendar { get; set; }
         [ForeignKey("FilmSessionStatus")]
         public virtual Status Status { get; set; }
-        [ForeignKey("FilmSessionID")]
+        [ForeignKey("FilmID")]
         public virtual Film Film { get; set; }
         [ForeignKey("CinemaID")]
         public virtual Cinema Cinema { get; set; }

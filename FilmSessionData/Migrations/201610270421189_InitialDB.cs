@@ -2,11 +2,14 @@ namespace FilmSessionData.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+    using FilmSessionCommon.SqlScriptCodeFirst;
+
     public partial class InitialDB : DbMigration
     {
+        
         public override void Up()
         {
+            ScriptGenerate scriptGenerate = new ScriptGenerate();
             CreateTable(
                 "dbo.Cinemas",
                 c => new
@@ -16,7 +19,8 @@ namespace FilmSessionData.Migrations
                         CinemaStatus = c.String(nullable: false, maxLength: 3),
                         CreatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.String(maxLength: 256),
-                        UpdatedDate = c.DateTime(nullable: false),
+                        UpdatedDate = c.DateTime(
+                            nullable: false),
                         UpdatedBy = c.String(maxLength: 256),
                         MetaKeyword = c.String(maxLength: 256),
                         MetaDescription = c.String(maxLength: 256),
@@ -68,7 +72,8 @@ namespace FilmSessionData.Migrations
                 .PrimaryKey(t => t.FilmID)
                 .ForeignKey("dbo.Statuss", t => t.FilmStatus, cascadeDelete: false)
                 .Index(t => t.FilmStatus);
-            
+            Sql(scriptGenerate.AlterAutoIndexTable("Films", "FilmCode", "FilmPrefix", "FilmID"));
+
             CreateTable(
                 "dbo.Statuss",
                 c => new
@@ -104,7 +109,8 @@ namespace FilmSessionData.Migrations
                 .PrimaryKey(t => t.RoomFilmID)
                 .ForeignKey("dbo.Statuss", t => t.RoomFilmStatus, cascadeDelete: false)
                 .Index(t => t.RoomFilmStatus);
-            
+            Sql(scriptGenerate.AlterAutoIndexTable("RoomFilms", "RoomFilmCode", "RoomFilmPrefix", "RoomFilmID"));
+
             CreateTable(
                 "dbo.SeatLists",
                 c => new
@@ -129,7 +135,8 @@ namespace FilmSessionData.Migrations
                 .Index(t => t.SeatListTable)
                 .Index(t => t.SeatTypeID)
                 .Index(t => t.SeatStatus);
-            
+            Sql(scriptGenerate.AlterAutoIndexTable("SeatLists", "SeatCode", "SeatPrefix", "SeatID"));
+
             CreateTable(
                 "dbo.SeatTables",
                 c => new
@@ -172,7 +179,8 @@ namespace FilmSessionData.Migrations
                 .PrimaryKey(t => t.SeatTypeID)
                 .ForeignKey("dbo.Statuss", t => t.SeatTypeStatus, cascadeDelete: false)
                 .Index(t => t.SeatTypeStatus);
-            
+            Sql(scriptGenerate.AlterAutoIndexTable("SeatTypes", "SeatTypeCode", "SeatTypePrefix", "SeatTypeID"));
+
             CreateTable(
                 "dbo.TimeSessions",
                 c => new
@@ -189,10 +197,9 @@ namespace FilmSessionData.Migrations
                     })
                 .PrimaryKey(t => t.TimeSessionID)
                 .ForeignKey("dbo.Statuss", t => t.TimeSessionStatus, cascadeDelete: false)
-                .Index(t => t.TimeSessionStatus);
-            
+                .Index(t => t.TimeSessionStatus);    
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.TimeSessions", "TimeSessionStatus", "dbo.Statuss");

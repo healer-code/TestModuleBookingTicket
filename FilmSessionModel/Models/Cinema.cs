@@ -12,6 +12,11 @@ namespace FilmSessionModel.Models
     [Table("Cinemas")]
     public class Cinema:Auditable
     {
+        public Cinema()
+        {
+            FilmSessions = new HashSet<FilmSession>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CinemaID { get; set; }

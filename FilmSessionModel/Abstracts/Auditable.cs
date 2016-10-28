@@ -6,13 +6,11 @@ namespace FilmSessionModel.Abstracts
 {
     public class Auditable : IAuditable
     {
-        [Required,DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? CreatedDate { set; get; }
 
         [MaxLength(256)]
         public string CreatedBy { set; get; }
 
-        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? UpdatedDate { set; get; }
 
         [MaxLength(256)]
