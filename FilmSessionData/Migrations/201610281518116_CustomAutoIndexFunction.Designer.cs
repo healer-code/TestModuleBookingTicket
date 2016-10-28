@@ -7,13 +7,13 @@ namespace FilmSessionData.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ChangeFilmComputed : IMigrationMetadata
+    public sealed partial class CustomAutoIndexFunction : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangeFilmComputed));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CustomAutoIndexFunction));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610281324312_ChangeFilmComputed"; }
+            get { return "201610281518116_CustomAutoIndexFunction"; }
         }
         
         string IMigrationMetadata.Source

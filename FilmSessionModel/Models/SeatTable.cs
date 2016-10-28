@@ -36,6 +36,6 @@ namespace FilmSessionModel.Models
 
         [ForeignKey("SeatTableRoom")]
         public virtual RoomFilm RoomFilm { get; set; }
-        public IEnumerable<SeatList> SeatLists { get; set; }
+        public ICollection<SeatList> SeatLists { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace FilmSessionData.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateFilmSessionColumn : IMigrationMetadata
+    public sealed partial class InitialFirstDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateFilmSessionColumn));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialFirstDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610281019208_UpdateFilmSessionColumn"; }
+            get { return "201610281507221_InitialFirstDB"; }
         }
         
         string IMigrationMetadata.Source

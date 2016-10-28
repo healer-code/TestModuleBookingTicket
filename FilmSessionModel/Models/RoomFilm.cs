@@ -21,7 +21,6 @@ namespace FilmSessionModel.Models
         [MaxLength(3)]
         public string RoomFilmPrefix { get; set; }
 
-        [Required]
         [DataType("nvarchar")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string RoomFilmCode { get; private set; }
@@ -39,6 +38,6 @@ namespace FilmSessionModel.Models
 
         [ForeignKey("RoomFilmStatus")]
         public virtual Status Status { get; set; }
-        public virtual IEnumerable<SeatTable> SeatTables { get; set; }
+        public virtual ICollection<SeatTable> SeatTables { get; set; }
     }
 }

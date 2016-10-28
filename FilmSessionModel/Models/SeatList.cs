@@ -18,7 +18,7 @@ namespace FilmSessionModel.Models
         [DataType("nvarchar")]
         [MaxLength(3)]
         public string SeatPrefix { get; set; }
-        [Required]
+
         [DataType("nvarchar")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string SeatCode { get; private set; } 

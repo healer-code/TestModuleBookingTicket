@@ -46,6 +46,67 @@ namespace FilmSessionData
                 .HasMany(e => e.FilmSessions)
                 .WithRequired(e => e.Film)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Cinema>()
+                .HasMany(n => n.FilmSessions)
+                .WithRequired(n => n.Cinema)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<SeatType>()
+                .HasMany(e => e.SeatLists)
+                .WithRequired(e => e.SeatType)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<SeatTable>()
+                .HasMany(e => e.SeatLists)
+                .WithRequired(e => e.SeatTable)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<RoomFilm>()
+                .HasMany(e => e.SeatTables)
+                .WithRequired(e => e.RoomFilm)
+                .WillCascadeOnDelete(false);
+
+            //status
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.Cinemas)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.Films)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.FilmSessions)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.RoomFilms)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.SeatLists)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.SeatTables)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.SeatTypes)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Status>()
+                .HasMany(e => e.TimeSessions)
+                .WithRequired(e => e.Status)
+                .WillCascadeOnDelete(false);
         }
     }
 }

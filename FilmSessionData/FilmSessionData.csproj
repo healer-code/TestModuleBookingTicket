@@ -56,21 +56,13 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\201610270421189_InitialDB.cs" />
-    <Compile Include="Migrations\201610270421189_InitialDB.Designer.cs">
-      <DependentUpon>201610270421189_InitialDB.cs</DependentUpon>
+    <Compile Include="Migrations\201610281507221_InitialFirstDB.cs" />
+    <Compile Include="Migrations\201610281507221_InitialFirstDB.Designer.cs">
+      <DependentUpon>201610281507221_InitialFirstDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610281019208_UpdateFilmSessionColumn.cs" />
-    <Compile Include="Migrations\201610281019208_UpdateFilmSessionColumn.Designer.cs">
-      <DependentUpon>201610281019208_UpdateFilmSessionColumn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610281120071_RemoveCreateDate.cs" />
-    <Compile Include="Migrations\201610281120071_RemoveCreateDate.Designer.cs">
-      <DependentUpon>201610281120071_RemoveCreateDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610281324312_ChangeFilmComputed.cs" />
-    <Compile Include="Migrations\201610281324312_ChangeFilmComputed.Designer.cs">
-      <DependentUpon>201610281324312_ChangeFilmComputed.cs</DependentUpon>
+    <Compile Include="Migrations\201610281518116_CustomAutoIndexFunction.cs" />
+    <Compile Include="Migrations\201610281518116_CustomAutoIndexFunction.Designer.cs">
+      <DependentUpon>201610281518116_CustomAutoIndexFunction.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,17 +87,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610270421189_InitialDB.resx">
-      <DependentUpon>201610270421189_InitialDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610281507221_InitialFirstDB.resx">
+      <DependentUpon>201610281507221_InitialFirstDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610281019208_UpdateFilmSessionColumn.resx">
-      <DependentUpon>201610281019208_UpdateFilmSessionColumn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610281120071_RemoveCreateDate.resx">
-      <DependentUpon>201610281120071_RemoveCreateDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610281324312_ChangeFilmComputed.resx">
-      <DependentUpon>201610281324312_ChangeFilmComputed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610281518116_CustomAutoIndexFunction.resx">
+      <DependentUpon>201610281518116_CustomAutoIndexFunction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

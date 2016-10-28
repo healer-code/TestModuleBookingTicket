@@ -17,7 +17,6 @@ namespace FilmSessionModel.Models
         [MaxLength(3)]
         public string SeatTypePrefix { get; set; }
 
-        [Required]
         [DataType("nvarchar")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string SeatTypeCode { get; private set; }
@@ -32,6 +31,6 @@ namespace FilmSessionModel.Models
 
         [ForeignKey("SeatTypeStatus")]
         public virtual Status Status { get; set; }
-        public virtual IEnumerable<SeatList> SeatLists { get; set; }
+        public virtual ICollection<SeatList> SeatLists { get; set; }
     }
 }
