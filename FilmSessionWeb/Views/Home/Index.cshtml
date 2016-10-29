@@ -1,7 +1,40 @@
-﻿
+﻿@using FilmSessionWeb.Models;
+@model IEnumerable<FilmViewModel>
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Booking Ticket</h2>
+<div id="film-booking-area">
+    <p>Danh sách phim đang chiếu</p>
+    <div id="list-film">
+        <ul>
+            @{
+                foreach (var item in Model)
+                {
+                    <li>
+                        @Html.ActionLink(@item.FilmName, "ViewFilmDetail", new { filmID = @item.FilmID }, new { data_index = @item.FilmID })
+                    </li>
+                }
 
+            }
+        </ul>       
+    </div>  
+</div>
+
+<style>
+    #list-film ul li{
+        list-style:none;
+        list-style-type:none;
+    }
+    #list-film ul li a{
+        font-weight:700;
+        font-size:1.5em;
+    }
+    #list-film ul li a:hover{
+        color:#b52020;
+        cursor:pointer;
+        text-decoration:none;
+    }
+</style>

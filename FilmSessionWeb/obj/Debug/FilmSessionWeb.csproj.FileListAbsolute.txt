@@ -73,3 +73,5 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirst
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.xml
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\AutoMapper.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\AutoMapper.xml

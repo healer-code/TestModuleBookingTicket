@@ -27,7 +27,29 @@ namespace FilmSessionCommon.BookingTime
             var temp = new JavaScriptSerializer().Deserialize<BookingPlan>(jBookingPlan);
             return temp;
         }
+        public BookingPlan GenerateSampleDataVersonSecond()
+        {
+            BookingPlan value = new BookingPlan();
+            value.DateCreatePlan = DateTime.ParseExact("02/11/2016", "dd/mm/yyyy", null);
 
+            //list booking time
+            List<BookingTime> lstBookingTime = new List<BookingTime>();
+            lstBookingTime.Add(new BookingTime() { TimeBookingID = 6, TimeBookingDetail = "9:30:00", RoomFilmID = 2, TimeBookingSession = 6 });
+            lstBookingTime.Add(new BookingTime() { TimeBookingID = 7, TimeBookingDetail = "11:30:00", RoomFilmID = 2, TimeBookingSession = 7 });
+            lstBookingTime.Add(new BookingTime() { TimeBookingID = 8, TimeBookingDetail = "2:30:00", RoomFilmID = 2, TimeBookingSession = 8 });
+            lstBookingTime.Add(new BookingTime() { TimeBookingID = 9, TimeBookingDetail = "17:30:00", RoomFilmID = 2, TimeBookingSession = 9 });
+
+            //list booking date
+            List<BookingDate> lstBookingDate = new List<BookingDate>();
+            lstBookingDate.Add(new BookingDate() { DateBooking = DateTime.ParseExact("03/11/2016", "dd/mm/yyyy", null), BookingTicketCalendar = lstBookingTime });
+            lstBookingDate.Add(new BookingDate() { DateBooking = DateTime.ParseExact("04/11/2016", "dd/mm/yyyy", null), BookingTicketCalendar = lstBookingTime });
+            lstBookingDate.Add(new BookingDate() { DateBooking = DateTime.ParseExact("05/11/2016", "dd/mm/yyyy", null), BookingTicketCalendar = lstBookingTime });
+            lstBookingDate.Add(new BookingDate() { DateBooking = DateTime.ParseExact("06/11/2016", "dd/mm/yyyy", null), BookingTicketCalendar = lstBookingTime });
+
+            //add booking plan
+            value.PlanCalendar = lstBookingDate;
+            return value;
+        }
         public BookingPlan GenerateSampleData()
         {
             BookingPlan value = new BookingPlan();

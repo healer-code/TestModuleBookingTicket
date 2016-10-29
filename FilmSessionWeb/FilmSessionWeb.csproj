@@ -52,6 +52,10 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -170,6 +174,7 @@
     <None Include="scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jsHelpers.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -183,6 +188,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
+    <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\CinemaViewModel.cs" />
+    <Compile Include="Models\FilmSessionViewModel.cs" />
+    <Compile Include="Models\FilmViewModel.cs" />
+    <Compile Include="Models\RoomFilmViewModel.cs" />
+    <Compile Include="Models\SeatListViewModel.cs" />
+    <Compile Include="Models\SeatTableViewModel.cs" />
+    <Compile Include="Models\SeatTypeViewModel.cs" />
+    <Compile Include="Models\StatusViewModel.cs" />
+    <Compile Include="Models\TimeSessionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +219,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\ViewFilmDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -212,8 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="scripts\SqlScripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FilmSessionCommon\FilmSessionCommon.csproj">
@@ -223,6 +238,10 @@
     <ProjectReference Include="..\FilmSessionData\FilmSessionData.csproj">
       <Project>{412a96fa-10a8-4687-90ce-68046076e7dc}</Project>
       <Name>FilmSessionData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FilmSessionModel\FilmSessionModel.csproj">
+      <Project>{37761c92-7e78-4d87-af84-187b834247bc}</Project>
+      <Name>FilmSessionModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\FilmSessionService\FilmSessionService.csproj">
       <Project>{bf2bfbe0-1ad1-4733-886f-f6e7f3ab81de}</Project>

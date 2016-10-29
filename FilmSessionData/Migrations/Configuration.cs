@@ -48,8 +48,8 @@
         private void CreateDataBookingTimeMainComponent(TestCodeFirstEntityDbContext context)
         {
             BookingTimeHelpers temp = new BookingTimeHelpers();
-            var bookingPlan = temp.ConvertBookingTimeToJson(temp.GenerateSampleData());
-            context.FilmSessions.Add(new FilmSession() {FilmID = 1,CinemaID = 1, FilmCalendar = bookingPlan, FilmSessionStatus ="NOT" });
+            var bookingPlan = temp.ConvertBookingTimeToJson(temp.GenerateSampleDataVersonSecond());
+            context.FilmSessions.Add(new FilmSession() {FilmID = 2,CinemaID = 1, FilmCalendar = bookingPlan, FilmSessionStatus ="NOT" });
         }
     }
 }

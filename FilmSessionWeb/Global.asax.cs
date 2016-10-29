@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using System.Diagnostics;
+using FilmSessionWeb.Mappings;
 
 namespace FilmSessionWeb
 {
@@ -18,8 +19,8 @@ namespace FilmSessionWeb
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Debug.WriteLine("App Start");             
+            AutoMapperConfiguration.Configure();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);        
         }
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FilmSessionService;
+using AutoMapper;
+using FilmSessionWeb.Models;
 
 namespace FilmSessionWeb.Controllers
 {
@@ -17,7 +19,18 @@ namespace FilmSessionWeb.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var lstFilm = _filmService.GetAll();
+            var lstFilmVm = Mapper.Map<IEnumerable<FilmViewModel>>(lstFilm);
+            return View(lstFilmVm);
+        }
+
+        public ActionResult ViewFilmDetail(int filmID)
+        {
+            var detailFilm = _filmService.GetFilmWithSessionTime(filmID);
+            ViewBag.BookingTime = _filmService.GenerateBookingPLan(detailFilm);
+            detailFilm.FilmSessions = null;
+            var result = Mapper.Map<FilmViewModel>(detailFilm);
+            return View(result);
         }
     }
 }

@@ -1,0 +1,84 @@
+﻿@model FilmSessionWeb.Models.FilmViewModel
+@using FilmSessionCommon.BookingTime;
+
+@{
+    ViewBag.Title = "ViewFilmDetail";
+}
+@{ 
+    var filmPLan = (BookingPlan)ViewBag.BookingTime;
+}
+
+
+<h2>Danh sách lịch chiếu phim</h2>
+<div id="film-detail">
+    <p>Tên phim: @Model.FilmName</p>
+    <p>Độ dài: @Model.FilmDuration</p>
+</div>
+
+<div id="film-list-session">
+    @{ 
+        int count = 0;
+        foreach (var item in filmPLan.PlanCalendar)
+        {
+            <div class="date-session">
+                <p>@item.DateBooking</p>
+                @{                    
+                    foreach (var time in @item.BookingTicketCalendar)
+                    {
+                        <a href="#" sessionID=@time.TimeBookingSession data-id=@count roomID=@time.RoomFilmID class="film-session-time"><span>@time.TimeBookingDetail</span></a>
+                        count++;
+                    }
+                }
+            </div>
+        }
+    }
+</div>
+
+
+<script src="@Url.Content("~/scripts/jquery-1.10.2.min.js")"></script>
+<script src="@Url.Content("~/scripts/bootstrap.min.js")"></script>
+<script src="@Url.Content("~/scripts/jsHelpers.js")"></script>
+<div class="modal fade" id="more-ticket-detail" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-transform:uppercase">Thông tin đặt vé chi tiết</h4>
+            </div>
+            <div class="modal-body">
+                <!--content of submit form -->
+                <form>
+                    <div class="form-group">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .date-session a{
+        
+    }
+    .date-session a span{
+        margin-right: 10px;
+        background:#FFBE00;
+        padding:2px 9px;
+        text-decoration:none;
+        color:black;
+        font-size:1.2em;
+        font-weight:700;
+        border:1px solid #fff;
+        border-radius:10px;
+    }
+    .date-session a span:hover{
+        border:1px solid black;        
+        color:#f1f1f1;
+    }
+    .date-session a:hover{
+        text-decoration:none;
+    }
+</style>
+
