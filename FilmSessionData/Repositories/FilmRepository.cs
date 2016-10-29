@@ -5,9 +5,9 @@ using FilmSessionModel.Models;
 
 namespace FilmSessionData.Repositories
 {
-    public interface IFilmRepository
+    public interface IFilmRepository:IRepository<Film>
     {
-
+        
     }
     public class FilmRepository: RepositoryBase<Film>, IFilmRepository
     {

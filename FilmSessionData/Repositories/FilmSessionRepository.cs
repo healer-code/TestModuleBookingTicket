@@ -8,7 +8,7 @@ using FilmSessionModel.Models;
 
 namespace FilmSessionData.Repositories
 {
-    public interface IFilmSessionRepository
+    public interface IFilmSessionRepository:IRepository<FilmSession>
     {
 
     }

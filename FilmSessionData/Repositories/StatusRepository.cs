@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FilmSessionData.Repositories
 {
-    public interface IStatusRepository
+    public interface IStatusRepository:IRepository<Status>
     {
         IEnumerable<Status> GetByName();
     }

@@ -9,5 +9,8 @@ namespace FilmSessionData.Infrastructures
     public interface IUnitOfWork
     {
         void Commit();
+        void BeginTransaction();
+        void CommitTransaction();
+        void RollbacnTran();
     }
 }
