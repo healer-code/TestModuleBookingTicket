@@ -17,7 +17,6 @@
 
 <div id="film-list-session">
     @{ 
-        int count = 0;
         foreach (var item in filmPLan.PlanCalendar)
         {
             <div class="date-session">
@@ -25,8 +24,7 @@
                 @{                    
                     foreach (var time in @item.BookingTicketCalendar)
                     {
-                        <a href="#" sessionID=@time.TimeBookingSession data-id=@count roomID=@time.RoomFilmID class="film-session-time"><span>@time.TimeBookingDetail</span></a>
-                        count++;
+                        <a href="#" sessionID=@time.TimeBookingSession roomID=@time.RoomFilmID class="film-session-time"><span>@time.TimeBookingDetail</span></a>
                     }
                 }
             </div>
@@ -49,9 +47,13 @@
                 <!--content of submit form -->
                 <form>
                     <div class="form-group">
-
+                        <p>Số lượng vé đặt</p>
+                        <input type="number" id="film-ticket-amount" class="form-control"/>
                     </div>
                 </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btn-submit-booking">Đặt vé</button>
             </div>
         </div>
     </div>
@@ -60,7 +62,7 @@
 
 <style>
     .date-session a{
-        
+        text-decoration:none;
     }
     .date-session a span{
         margin-right: 10px;
@@ -74,7 +76,8 @@
         border-radius:10px;
     }
     .date-session a span:hover{
-        border:1px solid black;        
+        border:1px solid black;
+        text-decoration:none;        
         color:#f1f1f1;
     }
     .date-session a:hover{

@@ -45,11 +45,14 @@
     <Compile Include="BookingTime\BookingPlan.cs" />
     <Compile Include="BookingTime\BookingTime.cs" />
     <Compile Include="BookingTime\BookingTimeHelpers.cs" />
+    <Compile Include="Common\CommonContrants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeatBooking\SeatBookingHelpers.cs" />
     <Compile Include="SqlScriptCodeFirst\ScriptGenerate.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BookingTicket\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
