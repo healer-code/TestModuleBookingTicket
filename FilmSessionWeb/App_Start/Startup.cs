@@ -13,18 +13,20 @@ using System.Web.Mvc;
 using System.Web.Http;
 using FilmSessionWeb.Controllers;
 using System.Diagnostics;
+using Microsoft.Owin.Security.DataProtection;
+using System.Web;
 
 [assembly: OwinStartup(typeof(FilmSessionWeb.App_Start.Startup))]
 
 namespace FilmSessionWeb.App_Start
 {
-    public class Startup
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
             // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
             ConfigAutofac(app);
-            Debug.WriteLine("Enter Startup!!!");
+            ConfigureAuth(app);
         }
         private void ConfigAutofac(IAppBuilder app)
         {
@@ -52,6 +54,13 @@ namespace FilmSessionWeb.App_Start
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             //set web api and controller
+
+            //asp identity 
+            //builder.RegisterType<ApplicationUserStore>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
+            builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
+            builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
+            builder.Register(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
+            builder.Register(c => app.GetDataProtectionProvider()).InstancePerRequest();
         }
     }
 }

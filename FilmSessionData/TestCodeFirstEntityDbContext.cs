@@ -7,10 +7,11 @@ using System.Data.Entity;
 using FilmSessionModel.Models;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace FilmSessionData
 {
-    public class TestCodeFirstEntityDbContext:DbContext
+    public class TestCodeFirstEntityDbContext: IdentityDbContext<ApplicationUser>
     {
         public TestCodeFirstEntityDbContext():base("TestCodeFirstEntity")
         {
@@ -39,6 +40,11 @@ namespace FilmSessionData
         public DbSet<SeatType> SeatTypes { get; set; }
         public DbSet<TimeSession> TimeSessions { get; set; }
         public DbSet<Status> Statuss { get; set; }
+
+        public static TestCodeFirstEntityDbContext Create()
+        {
+            return new TestCodeFirstEntityDbContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -107,6 +113,10 @@ namespace FilmSessionData
                 .HasMany(e => e.TimeSessions)
                 .WithRequired(e => e.Status)
                 .WillCascadeOnDelete(false);
+
+            //Identity 
+            modelBuilder.Entity<IdentityUserRole>().HasKey(e => e.UserId);
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(e => e.UserId);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace FilmSessionData.Repositories
     }
     public class RoomFilmRepository: RepositoryBase<RoomFilm>, IRoomFilmRepository
     {
-        public RoomFilmRepository(DbFactory dbFactory):base(dbFactory)
+        public RoomFilmRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

@@ -75,3 +75,15 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirst
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\AutoMapper.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\AutoMapper.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionWeb\bin\Microsoft.Owin.Security.OAuth.xml
