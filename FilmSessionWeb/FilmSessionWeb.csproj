@@ -260,6 +260,8 @@
     <Content Include="Views\BookingTicket\DetailBooking.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\_loginPartial.cshtml" />
+    <Content Include="Views\Account\CustomerRegister.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

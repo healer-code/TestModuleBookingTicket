@@ -12,9 +12,6 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirst
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\FilmSessionModel.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\FilmSessionCommon.pdb
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\FilmSessionModel.pdb
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.InitialFirstDB.resources
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.csproj.GenerateResource.Cache
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.CustomAutoIndexFunction.resources
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
@@ -32,5 +29,5 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirst
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\bin\Debug\Newtonsoft.Json.xml
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.InitialIdentity.resources
-D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.UpdateDateTime.resources
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.Migrations.InitialDB.resources
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\TestComponent\TestCodeFirstEntityProject\FilmSessionData\obj\Debug\FilmSessionData.csproj.GenerateResource.Cache

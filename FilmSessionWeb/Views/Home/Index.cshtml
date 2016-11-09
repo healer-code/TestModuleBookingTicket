@@ -23,11 +23,11 @@
     </div>  
 </div>
 
-<div id="register-area">
-    <a href="@Url.Action("Login","Account")">Đăng nhập</a>
-    <a href="@Url.Action("Register","Account")">Đăng ký</a>
-</div>
+@Html.Partial("_loginPartial")
 
+<div id="customer-area">
+    @Html.ActionLink("DK Thành viên","CustomerRegister","Account")
+</div>
 <style>
     #list-film ul li{
         list-style:none;

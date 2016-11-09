@@ -21,5 +21,8 @@ namespace FilmSessionModel.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual Customer Customer { get; set; }
+        public virtual Staff Staff { get; set; }
     }
 }

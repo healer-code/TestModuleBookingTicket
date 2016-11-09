@@ -40,6 +40,8 @@ namespace FilmSessionData
         public DbSet<SeatType> SeatTypes { get; set; }
         public DbSet<TimeSession> TimeSessions { get; set; }
         public DbSet<Status> Statuss { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public static TestCodeFirstEntityDbContext Create()
         {

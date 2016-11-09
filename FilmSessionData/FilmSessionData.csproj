@@ -92,21 +92,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\201610281507221_InitialFirstDB.cs" />
-    <Compile Include="Migrations\201610281507221_InitialFirstDB.Designer.cs">
-      <DependentUpon>201610281507221_InitialFirstDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610281518116_CustomAutoIndexFunction.cs" />
-    <Compile Include="Migrations\201610281518116_CustomAutoIndexFunction.Designer.cs">
-      <DependentUpon>201610281518116_CustomAutoIndexFunction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611080709455_InitialIdentity.cs" />
-    <Compile Include="Migrations\201611080709455_InitialIdentity.Designer.cs">
-      <DependentUpon>201611080709455_InitialIdentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611080926537_UpdateDateTime.cs" />
-    <Compile Include="Migrations\201611080926537_UpdateDateTime.Designer.cs">
-      <DependentUpon>201611080926537_UpdateDateTime.cs</DependentUpon>
+    <Compile Include="Migrations\201611081742365_InitialDB.cs" />
+    <Compile Include="Migrations\201611081742365_InitialDB.Designer.cs">
+      <DependentUpon>201611081742365_InitialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,17 +121,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610281507221_InitialFirstDB.resx">
-      <DependentUpon>201610281507221_InitialFirstDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610281518116_CustomAutoIndexFunction.resx">
-      <DependentUpon>201610281518116_CustomAutoIndexFunction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611080709455_InitialIdentity.resx">
-      <DependentUpon>201611080709455_InitialIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611080926537_UpdateDateTime.resx">
-      <DependentUpon>201611080926537_UpdateDateTime.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611081742365_InitialDB.resx">
+      <DependentUpon>201611081742365_InitialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

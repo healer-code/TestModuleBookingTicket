@@ -3,7 +3,7 @@ namespace FilmSessionData.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialFirstDB : DbMigration
+    public partial class InitialDB : DbMigration
     {
         public override void Up()
         {
@@ -68,7 +68,7 @@ namespace FilmSessionData.Migrations
                 .PrimaryKey(t => t.FilmID)
                 .ForeignKey("dbo.Statuss", t => t.FilmStatus)
                 .Index(t => t.FilmStatus);
-
+            
             CreateTable(
                 "dbo.Statuss",
                 c => new
@@ -191,10 +191,113 @@ namespace FilmSessionData.Migrations
                 .ForeignKey("dbo.Statuss", t => t.TimeSessionStatus)
                 .Index(t => t.TimeSessionStatus);
             
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        IndexStaff = c.Int(nullable: false, identity: true),
+                        Point = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.IndexStaff);
+            
+            CreateTable(
+                "dbo.IdentityRoles",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.IdentityUserRoles",
+                c => new
+                    {
+                        UserId = c.String(nullable: false, maxLength: 128),
+                        RoleId = c.String(),
+                        IdentityRole_Id = c.String(maxLength: 128),
+                        ApplicationUser_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.UserId)
+                .ForeignKey("dbo.IdentityRoles", t => t.IdentityRole_Id)
+                .ForeignKey("dbo.ApplicationUsers", t => t.ApplicationUser_Id)
+                .Index(t => t.IdentityRole_Id)
+                .Index(t => t.ApplicationUser_Id);
+            
+            CreateTable(
+                "dbo.Staffs",
+                c => new
+                    {
+                        IndexStaff = c.Int(nullable: false, identity: true),
+                        Role = c.String(),
+                    })
+                .PrimaryKey(t => t.IndexStaff);
+            
+            CreateTable(
+                "dbo.ApplicationUsers",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        FullName = c.String(),
+                        Address = c.String(),
+                        Birthday = c.DateTime(),
+                        Email = c.String(),
+                        EmailConfirmed = c.Boolean(nullable: false),
+                        PasswordHash = c.String(),
+                        SecurityStamp = c.String(),
+                        PhoneNumber = c.String(),
+                        PhoneNumberConfirmed = c.Boolean(nullable: false),
+                        TwoFactorEnabled = c.Boolean(nullable: false),
+                        LockoutEndDateUtc = c.DateTime(),
+                        LockoutEnabled = c.Boolean(nullable: false),
+                        AccessFailedCount = c.Int(nullable: false),
+                        UserName = c.String(),
+                        Customer_IndexStaff = c.Int(),
+                        Staff_IndexStaff = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Customers", t => t.Customer_IndexStaff)
+                .ForeignKey("dbo.Staffs", t => t.Staff_IndexStaff)
+                .Index(t => t.Customer_IndexStaff)
+                .Index(t => t.Staff_IndexStaff);
+            
+            CreateTable(
+                "dbo.IdentityUserClaims",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        UserId = c.String(),
+                        ClaimType = c.String(),
+                        ClaimValue = c.String(),
+                        ApplicationUser_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ApplicationUsers", t => t.ApplicationUser_Id)
+                .Index(t => t.ApplicationUser_Id);
+            
+            CreateTable(
+                "dbo.IdentityUserLogins",
+                c => new
+                    {
+                        UserId = c.String(nullable: false, maxLength: 128),
+                        LoginProvider = c.String(),
+                        ProviderKey = c.String(),
+                        ApplicationUser_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.UserId)
+                .ForeignKey("dbo.ApplicationUsers", t => t.ApplicationUser_Id)
+                .Index(t => t.ApplicationUser_Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.ApplicationUsers", "Staff_IndexStaff", "dbo.Staffs");
+            DropForeignKey("dbo.IdentityUserRoles", "ApplicationUser_Id", "dbo.ApplicationUsers");
+            DropForeignKey("dbo.IdentityUserLogins", "ApplicationUser_Id", "dbo.ApplicationUsers");
+            DropForeignKey("dbo.ApplicationUsers", "Customer_IndexStaff", "dbo.Customers");
+            DropForeignKey("dbo.IdentityUserClaims", "ApplicationUser_Id", "dbo.ApplicationUsers");
+            DropForeignKey("dbo.IdentityUserRoles", "IdentityRole_Id", "dbo.IdentityRoles");
             DropForeignKey("dbo.FilmSessions", "CinemaID", "dbo.Cinemas");
             DropForeignKey("dbo.TimeSessions", "TimeSessionStatus", "dbo.Statuss");
             DropForeignKey("dbo.SeatTypes", "SeatTypeStatus", "dbo.Statuss");
@@ -208,6 +311,12 @@ namespace FilmSessionData.Migrations
             DropForeignKey("dbo.Films", "FilmStatus", "dbo.Statuss");
             DropForeignKey("dbo.Cinemas", "CinemaStatus", "dbo.Statuss");
             DropForeignKey("dbo.FilmSessions", "FilmID", "dbo.Films");
+            DropIndex("dbo.IdentityUserLogins", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.IdentityUserClaims", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.ApplicationUsers", new[] { "Staff_IndexStaff" });
+            DropIndex("dbo.ApplicationUsers", new[] { "Customer_IndexStaff" });
+            DropIndex("dbo.IdentityUserRoles", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.IdentityUserRoles", new[] { "IdentityRole_Id" });
             DropIndex("dbo.TimeSessions", new[] { "TimeSessionStatus" });
             DropIndex("dbo.SeatTypes", new[] { "SeatTypeStatus" });
             DropIndex("dbo.SeatLists", new[] { "SeatStatus" });
@@ -221,6 +330,13 @@ namespace FilmSessionData.Migrations
             DropIndex("dbo.FilmSessions", new[] { "CinemaID" });
             DropIndex("dbo.FilmSessions", new[] { "FilmID" });
             DropIndex("dbo.Cinemas", new[] { "CinemaStatus" });
+            DropTable("dbo.IdentityUserLogins");
+            DropTable("dbo.IdentityUserClaims");
+            DropTable("dbo.ApplicationUsers");
+            DropTable("dbo.Staffs");
+            DropTable("dbo.IdentityUserRoles");
+            DropTable("dbo.IdentityRoles");
+            DropTable("dbo.Customers");
             DropTable("dbo.TimeSessions");
             DropTable("dbo.SeatTypes");
             DropTable("dbo.SeatLists");
